@@ -1,0 +1,6 @@
+---
+- name: Install Vector
+  hosts: vector
+  remote_user: denis
+  roles:
+    - vector-role
