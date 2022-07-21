@@ -8,7 +8,7 @@
 
 - name: Install vector packages
   become: true
-  ansible.builtin.apt: #ansible.builtin.yum:
+  ansible.builtin.yum:
     name: "{{ item }}-{{ vector_version }}.rpm"
   loop: "{{ vector_packages }}"
   notify: Start vector service
